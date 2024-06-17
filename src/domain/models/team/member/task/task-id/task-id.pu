@@ -1,0 +1,7 @@
+@startuml TaskId
+
+class "TaskId" as TaskId {
+    + value: uuid
+}
+
+@enduml

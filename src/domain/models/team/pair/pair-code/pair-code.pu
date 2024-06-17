@@ -1,0 +1,11 @@
+@startuml PairCode
+
+class "PairCode" as PairCode {
+    + value: string
+}
+
+note bottom of PairCode
+    ペアを識別するために使用されるユニークなコード。
+end note
+
+@enduml

@@ -1,0 +1,7 @@
+@startuml Name
+
+class "Name" as Name {
+    + value: string
+}
+
+@enduml

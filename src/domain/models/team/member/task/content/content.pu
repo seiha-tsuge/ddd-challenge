@@ -1,0 +1,7 @@
+@startuml Content
+
+class "Content" as Content {
+    + value: string
+}
+
+@enduml

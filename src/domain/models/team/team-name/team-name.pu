@@ -1,0 +1,15 @@
+@startuml TeamName
+
+class "TeamName" as TeamName {
+    + value: string
+}
+
+note bottom of TeamName
+  チーム名は数字でなければならず、
+  重複は許されません。
+  また、チーム名は最大で3文字までです。
+  （例：チーム名「1031」は存在できず、
+  「999」までしか使用できません）
+end note
+
+@enduml

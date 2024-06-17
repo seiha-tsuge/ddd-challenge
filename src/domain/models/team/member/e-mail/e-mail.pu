@@ -1,0 +1,11 @@
+@startuml Email
+
+class "Email" as Email {
+    + value: string
+}
+
+note bottom of Email
+  参加者のメールアドレス。重複不可。
+end note
+
+@enduml

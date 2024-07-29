@@ -1,0 +1,14 @@
+@startuml TeamAggregation
+
+title チーム集約 (Team Aggregation)
+
+package "チーム集約(TeamAggregation)" {
+    !include ./team.pu
+    !include ./pair/pair.pu
+    !include ./member/member.pu
+
+    Team "1" -down- "1..*" Pair : has >
+    Team "1" -down- "3..*" Member : has >
+}
+
+@enduml

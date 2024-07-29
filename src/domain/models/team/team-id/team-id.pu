@@ -1,0 +1,7 @@
+@startuml TeamId
+
+class "TeamId" as TeamId {
+    + value: uuid
+}
+
+@enduml

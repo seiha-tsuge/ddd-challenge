@@ -1,0 +1,15 @@
+@startuml ProgressStatus
+
+enum "ProgressStatus" as ProgressStatus {
+  NotStarted
+  ReviewPending
+  Completed
+}
+
+note bottom of ProgressStatus
+  進捗ステータスはいつでも変更可能です。
+  ただし、一度「完了」に設定した後は「レビュー待ち」または「未着手」に戻すことはできません。
+  課題の所有者のみが進捗ステータスを変更できます。
+end note
+
+@enduml

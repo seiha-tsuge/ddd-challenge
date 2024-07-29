@@ -1,0 +1,7 @@
+@startuml Order
+
+class "Order" as Order {
+    + value: number
+}
+
+@enduml

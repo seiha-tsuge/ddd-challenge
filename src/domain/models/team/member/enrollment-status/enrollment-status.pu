@@ -1,0 +1,15 @@
+@startuml EnrollmentStatus
+
+enum "EnrollmentStatus" as EnrollmentStatus {
+  Active
+  OnLeave
+  Withdrawn
+}
+
+note bottom of EnrollmentStatus
+  ステータスが「Active」でない場合、
+  参加者はどのチームにもペアにも
+  所属できません。
+end note
+
+@enduml

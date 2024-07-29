@@ -1,0 +1,7 @@
+@startuml PairId
+
+class "PairId" as PairId {
+    + value: uuid
+}
+
+@enduml

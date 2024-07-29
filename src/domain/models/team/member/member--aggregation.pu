@@ -1,0 +1,12 @@
+@startuml MemberAggregation
+
+title 参加者集約 (Member Aggregation)
+
+package "参加者集約(MemberAggregation)" {
+    !include ./member.pu
+    !include ./task/task.pu
+
+    Member "1" -down- "1..*" Task : has >
+}
+
+@enduml

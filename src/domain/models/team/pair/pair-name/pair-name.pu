@@ -1,0 +1,12 @@
+@startuml PairName
+
+class "PairName" as PairName {
+    + value: string
+}
+
+note bottom of PairName
+  ペア名は英文字（a, b, c, d, eなど）で
+  1文字でなければなりません。
+end note
+
+@enduml

@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "plantuml.server": "http://localhost:8888",
+  "plantuml.render": "PlantUMLServer"
+}

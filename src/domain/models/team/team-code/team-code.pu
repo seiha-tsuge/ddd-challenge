@@ -1,0 +1,11 @@
+@startuml TeamCode
+
+class "TeamCode" as TeamCode {
+    + value: string
+}
+
+note bottom of TeamCode
+    チームを識別するために使用されるユニークなコード。
+end note
+
+@enduml

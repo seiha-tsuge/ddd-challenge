@@ -1,0 +1,7 @@
+@startuml MemberId
+
+class "MemberId" as MemberId {
+    + value: uuid
+}
+
+@enduml

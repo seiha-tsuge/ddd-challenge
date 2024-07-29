@@ -1,0 +1,26 @@
+@startuml Task
+
+!include ./task-id/task-id.pu
+!include ./title/title.pu
+!include ./content/content.pu
+!include ./progress-status/progress-status.pu
+!include ./order/order.pu
+!include ./category/category.pu
+
+class "Task(タスク)" as Task << (E,green) Entity >> {
+    TaskId: タスクID 
+    Title: タイトル
+    Content: 内容
+    ProgressStatus: 進捗状況
+    Order: 順番
+    Category: カテゴリー
+}
+
+Task *-down- TaskId
+Task *-down- Title
+Task *-down- Content
+Task *-down- ProgressStatus
+Task *-down- Order
+Task *-down- Category
+
+@enduml

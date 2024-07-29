@@ -1,0 +1,7 @@
+@startuml Category
+
+class "Category" as Category {
+    + value: string
+}
+
+@enduml

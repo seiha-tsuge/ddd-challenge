@@ -1,0 +1,24 @@
+@startuml Member
+
+!include ./member-id/member-id.pu
+!include ./name/name.pu
+!include ./e-mail/e-mail.pu
+!include ./enrollment-status/enrollment-status.pu
+!include ./join-date/join-date.pu
+
+
+
+class "Member(参加者)" as Member << (E,green) Entity >> {
+    MemberId: メンバーID
+    Name: 名前
+    Email: Eメール
+    JoinDate: 参加日
+}
+
+Member *-down- MemberId
+Member *-down- Name
+Member *-down- Email
+Member *-down- EnrollmentStatus
+Member *-down- JoinDate
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml Pair
+
+!include ./pair-id/pair-id.pu
+!include ./pair-code/pair-code.pu
+!include ./pair-name/pair-name.pu
+
+class "Pair(ペア)" as Pair << (E,green) Entity >> {
+    PairId: ペアID 
+    PairCode: ペアコード
+    PairName: ペア名
+}
+
+note bottom of Pair
+    ペアの参加者は2名から3名までです。
+    1名や4名のペアは存在できません。
+    また、ペアは必ず同じチームの参加者で構成されます。
+end note
+
+Pair *-down- PairId
+Pair *-down- PairCode
+Pair *-down- PairName
+
+@enduml

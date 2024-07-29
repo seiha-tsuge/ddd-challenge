@@ -1,0 +1,7 @@
+@startuml JoinDate
+
+class "JoinDate" as JoinDate {
+    + value: date
+}
+
+@enduml

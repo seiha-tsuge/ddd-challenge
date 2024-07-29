@@ -1,0 +1,27 @@
+@startuml Team
+
+!include ./team-id/team-id.pu
+!include ./team-code/team-code.pu
+!include ./team-name/team-name.pu
+!include ./pair/pair.pu
+!include ./member/member.pu
+
+class "Team(チーム)" as Team << (R,red) RootEntity >> {
+    TeamId: チームID 
+    TeamCode: チームコード
+    TeamName: チーム名
+    Pair: ペア
+    Member: メンバー
+}
+
+note bottom of Team
+    チームには最低でも3名の参加者が必要です。
+end note
+
+Team *-down- TeamId
+Team *-down- TeamCode
+Team *-down- TeamName
+Team *-down- Pair
+Team *-down- Member
+
+@enduml

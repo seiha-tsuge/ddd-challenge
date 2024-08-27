@@ -9,7 +9,7 @@ export class Name extends ValueObject<NameValue, 'Name'> {
 
   protected validate(value: NameValue): void {
     if (typeof value !== 'string' || value.trim().length === 0) {
-      throw new Error('Invalid name');
+      throw new Error('無効なNameです');
     }
   }
 

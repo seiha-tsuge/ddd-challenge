@@ -9,7 +9,7 @@ export class Content extends ValueObject<ContentValue, 'Content'> {
 
   protected validate(value: ContentValue): void {
     if (typeof value !== 'string' || value.trim().length === 0) {
-      throw new Error('Content value cannot be empty');
+      throw new Error('無効なContentです');
     }
   }
 

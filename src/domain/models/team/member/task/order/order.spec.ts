@@ -8,15 +8,11 @@ describe('Order', () => {
   });
 
   it('無効なOrderでエラーがスローされる（負の数）', () => {
-    expect(() => new Order(-1)).toThrow(
-      'Order value must be a positive number',
-    );
+    expect(() => new Order(-1)).toThrow('無効なOrderです');
   });
 
   it('無効なOrderでエラーがスローされる（数値ではない）', () => {
-    expect(() => new Order('100' as any)).toThrow(
-      'Order value must be a positive number',
-    );
+    expect(() => new Order('100' as any)).toThrow('無効なOrderです');
   });
 
   it('等価性のテスト（同じOrder）', () => {

@@ -18,21 +18,21 @@ describe('ProgressStatus', () => {
 
   it('無効なステータスでエラーがスローされる', () => {
     expect(() => new ProgressStatus('InvalidStatus' as any)).toThrow(
-      'Invalid progress status',
+      '無効なProgressStatusです',
     );
   });
 
   it('CompletedからNotStartedへの変更でエラーがスローされる', () => {
     const status = new ProgressStatus('Completed');
     expect(() => status.changeStatus('NotStarted')).toThrow(
-      'Cannot change status back from Completed to ReviewPending or NotStarted',
+      'ステータスをCompletedからReviewPendingまたはNotStartedに戻すことはできません',
     );
   });
 
   it('CompletedからReviewPendingへの変更でエラーがスローされる', () => {
     const status = new ProgressStatus('Completed');
     expect(() => status.changeStatus('ReviewPending')).toThrow(
-      'Cannot change status back from Completed to ReviewPending or NotStarted',
+      'ステータスをCompletedからReviewPendingまたはNotStartedに戻すことはできません',
     );
   });
 

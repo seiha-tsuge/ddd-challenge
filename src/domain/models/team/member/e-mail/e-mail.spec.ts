@@ -17,7 +17,7 @@ describe('Email', () => {
   });
 
   it('無効な形式のメールアドレスでエラーを投げること', () => {
-    expect(() => new Email('invalid-email')).toThrow('Invalid email format');
+    expect(() => new Email('invalid-email')).toThrow('無効なEmail形式です');
   });
 
   it('他のEmailオブジェクトと正しく等価性を検証できること', () => {

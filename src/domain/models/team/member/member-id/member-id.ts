@@ -10,7 +10,7 @@ export class MemberId extends ValueObject<MemberIdValue, 'MemberId'> {
   protected validate(value: MemberIdValue): void {
     const nanoidRegex = /^[\w-]{21}$/;
     if (!nanoidRegex.test(value)) {
-      throw new Error('Invalid Member ID');
+      throw new Error('無効なMemberIdです');
     }
   }
 

@@ -10,7 +10,7 @@ export class Category extends ValueObject<CategoryValue, 'Category'> {
 
   protected validate(value: CategoryValue): void {
     if (typeof value !== 'string' || value.trim().length === 0) {
-      throw new Error('Category value cannot be empty');
+      throw new Error('無効なCategoryです');
     }
   }
 

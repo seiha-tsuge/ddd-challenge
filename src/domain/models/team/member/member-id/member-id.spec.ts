@@ -9,7 +9,7 @@ describe('MemberId', () => {
   });
 
   it('無効なMemberIdでエラーがスローされる（無効な文字列）', () => {
-    expect(() => new MemberId('invalid-id')).toThrow('Invalid Member ID');
+    expect(() => new MemberId('invalid-id')).toThrow('無効なMemberIdです');
   });
 
   it('等価性のテスト（同じMemberId）', () => {

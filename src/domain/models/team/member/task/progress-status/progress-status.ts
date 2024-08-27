@@ -17,16 +17,15 @@ export class ProgressStatus extends ValueObject<
       'Completed',
     ];
     if (!validStatuses.includes(value)) {
-      throw new Error('Invalid progress status');
+      throw new Error('無効なProgressStatusです');
     }
 
-    // If the status is 'Completed', it cannot be changed back to 'ReviewPending' or 'NotStarted'
     if (
       this._value === 'Completed' &&
       (value === 'ReviewPending' || value === 'NotStarted')
     ) {
       throw new Error(
-        'Cannot change status back from Completed to ReviewPending or NotStarted',
+        'ステータスをCompletedからReviewPendingまたはNotStartedに戻すことはできません',
       );
     }
   }

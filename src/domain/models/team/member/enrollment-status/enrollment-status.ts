@@ -13,7 +13,7 @@ export class EnrollmentStatus extends ValueObject<
   protected validate(value: EnrollmentStatusValue): void {
     const validStatuses = ['Active', 'OnLeave', 'Withdrawn'];
     if (!validStatuses.includes(value)) {
-      throw new Error('Invalid enrollment status');
+      throw new Error('無効なEnrollmentStatusです');
     }
   }
 

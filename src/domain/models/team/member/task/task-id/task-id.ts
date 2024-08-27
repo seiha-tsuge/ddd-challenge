@@ -10,7 +10,7 @@ export class TaskId extends ValueObject<TaskIdValue, 'TaskId'> {
   protected validate(value: TaskIdValue): void {
     const nanoidRegex = /^[\w-]{21}$/;
     if (!nanoidRegex.test(value)) {
-      throw new Error('Invalid Task ID');
+      throw new Error('無効なTaskIdです');
     }
   }
 

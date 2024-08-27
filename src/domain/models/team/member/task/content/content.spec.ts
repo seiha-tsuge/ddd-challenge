@@ -8,11 +8,11 @@ describe('Content', () => {
   });
 
   it('無効なContentでエラーがスローされる（空文字列）', () => {
-    expect(() => new Content('')).toThrow('Invalid Content value');
+    expect(() => new Content('')).toThrow('無効なContentです');
   });
 
   it('無効なContentでエラーがスローされる（空白のみの文字列）', () => {
-    expect(() => new Content('   ')).toThrow('Invalid Content value');
+    expect(() => new Content('   ')).toThrow('無効なContentです');
   });
 
   it('等価性のテスト（同じContent）', () => {

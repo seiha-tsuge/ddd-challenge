@@ -10,7 +10,7 @@ export class Email extends ValueObject<EmailValue, 'Email'> {
   protected validate(email: string): void {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      throw new Error('Invalid email format');
+      throw new Error('無効なEmail形式です');
     }
   }
 

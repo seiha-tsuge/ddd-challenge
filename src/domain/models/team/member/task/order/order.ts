@@ -9,7 +9,7 @@ export class Order extends ValueObject<OrderValue, 'Order'> {
 
   protected validate(value: OrderValue): void {
     if (typeof value !== 'number' || value < 0) {
-      throw new Error('Order value must be a positive number');
+      throw new Error('無効なOrderです');
     }
   }
 

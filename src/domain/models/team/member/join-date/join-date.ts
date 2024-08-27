@@ -9,7 +9,7 @@ export class JoinDate extends ValueObject<JoinDateValue, 'JoinDate'> {
 
   protected validate(value: JoinDateValue): void {
     if (!(value instanceof Date) || isNaN(value.getTime())) {
-      throw new Error('Invalid date');
+      throw new Error('無効なJoinDateです');
     }
   }
 

@@ -8,12 +8,14 @@ describe('JoinDate', () => {
   });
 
   it('無効な日付でエラーがスローされる（文字列）', () => {
-    expect(() => new JoinDate('invalid-date' as any)).toThrow('Invalid date');
+    expect(() => new JoinDate('invalid-date' as any)).toThrow(
+      '無効なJoinDateです',
+    );
   });
 
   it('無効な日付でエラーがスローされる（NaN）', () => {
     expect(() => new JoinDate(new Date('invalid-date'))).toThrow(
-      'Invalid date',
+      '無効なJoinDateです',
     );
   });
 

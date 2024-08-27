@@ -8,11 +8,11 @@ describe('Name', () => {
   });
 
   it('無効なNameでエラーがスローされる（空文字列）', () => {
-    expect(() => new Name('')).toThrow('Invalid name');
+    expect(() => new Name('')).toThrow('無効なNameです');
   });
 
   it('無効なNameでエラーがスローされる（空白のみの文字列）', () => {
-    expect(() => new Name('   ')).toThrow('Invalid name');
+    expect(() => new Name('   ')).toThrow('無効なNameです');
   });
 
   it('等価性のテスト（同じName）', () => {

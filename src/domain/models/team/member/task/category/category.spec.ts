@@ -8,11 +8,11 @@ describe('Category', () => {
   });
 
   it('無効なCategoryでエラーがスローされる（空文字列）', () => {
-    expect(() => new Category('')).toThrow('Invalid category value');
+    expect(() => new Category('')).toThrow('無効なCategoryです');
   });
 
   it('無効なCategoryでエラーがスローされる（空白のみの文字列）', () => {
-    expect(() => new Category('   ')).toThrow('Invalid category value');
+    expect(() => new Category('   ')).toThrow('無効なCategoryです');
   });
 
   it('等価性のテスト（同じCategory）', () => {

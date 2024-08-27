@@ -18,7 +18,7 @@ describe('EnrollmentStatus', () => {
 
   it('無効なステータスでエラーがスローされる', () => {
     expect(() => new EnrollmentStatus('InvalidStatus' as any)).toThrow(
-      'Invalid enrollment status',
+      '無効なEnrollmentStatusです',
     );
   });
 

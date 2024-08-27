@@ -9,7 +9,7 @@ describe('TaskId', () => {
   });
 
   it('無効なTaskIdでエラーがスローされる（無効な文字列）', () => {
-    expect(() => new TaskId('invalid-id')).toThrow('Invalid Task ID');
+    expect(() => new TaskId('invalid-id')).toThrow('無効なTaskIdです');
   });
 
   it('等価性のテスト（同じTaskId）', () => {

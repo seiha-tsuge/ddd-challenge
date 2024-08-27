@@ -10,7 +10,7 @@ export class Title extends ValueObject<TitleValue, 'Title'> {
 
   protected validate(value: TitleValue): void {
     if (typeof value !== 'string' || value.trim().length === 0) {
-      throw new Error('Title value cannot be empty');
+      throw new Error('無効なTitleです');
     }
   }
 

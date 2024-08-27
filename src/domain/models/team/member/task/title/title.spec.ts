@@ -8,11 +8,11 @@ describe('Title', () => {
   });
 
   it('無効なTitleでエラーがスローされる（空文字列）', () => {
-    expect(() => new Title('')).toThrow('Invalid Title value');
+    expect(() => new Title('')).toThrow('無効なTitleです');
   });
 
   it('無効なTitleでエラーがスローされる（空白のみの文字列）', () => {
-    expect(() => new Title('   ')).toThrow('Invalid Title value');
+    expect(() => new Title('   ')).toThrow('無効なTitleです');
   });
 
   it('等価性のテスト（同じTitle）', () => {

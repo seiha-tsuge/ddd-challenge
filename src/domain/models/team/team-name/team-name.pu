@@ -1,7 +1,7 @@
 @startuml TeamName
 
 class "TeamName" as TeamName {
-    + value: string
+    + value: number
 }
 
 note bottom of TeamName

@@ -1,4 +1,4 @@
-import { ValueObject } from '../../../shared/value-object';
+import { ValueObject } from '@/domain/models/shared/value-object';
 
 type JoinDateValue = Date;
 

@@ -5,6 +5,7 @@ type PairCodeValue = string;
 export class PairCode extends ValueObject<PairCodeValue, 'PairCode'> {
   constructor(value: PairCodeValue) {
     super(value);
+    this.validate(value);
   }
 
   protected validate(value: PairCodeValue): void {

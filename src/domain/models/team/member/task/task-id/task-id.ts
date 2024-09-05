@@ -5,6 +5,7 @@ type TaskIdValue = string;
 export class TaskId extends ValueObject<TaskIdValue, 'TaskId'> {
   constructor(value: TaskIdValue) {
     super(value);
+    this.validate(value);
   }
 
   protected validate(value: TaskIdValue): void {

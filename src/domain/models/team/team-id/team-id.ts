@@ -5,6 +5,7 @@ type TeamIdValue = string;
 export class TeamId extends ValueObject<TeamIdValue, 'TeamId'> {
   constructor(value: TeamIdValue) {
     super(value);
+    this.validate(value);
   }
 
   protected validate(value: TeamIdValue): void {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { PairCode } from './pair-code';
 
 describe('PairCode', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { Order } from './order';
 
 describe('Order', () => {
@@ -12,6 +13,7 @@ describe('Order', () => {
   });
 
   it('無効なOrderでエラーがスローされる（数値ではない）', () => {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     expect(() => new Order('100' as any)).toThrow('無効なOrderです');
   });
 

@@ -1,5 +1,6 @@
-import { MemberId } from './member-id';
 import { nanoid } from 'nanoid';
+import { describe, expect, it } from 'vitest';
+import { MemberId } from './member-id';
 
 describe('MemberId', () => {
   it('有効なMemberIdでMemberIdを作成できる', () => {

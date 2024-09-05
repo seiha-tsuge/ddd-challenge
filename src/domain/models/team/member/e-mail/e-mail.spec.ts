@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it } from 'vitest';
 import { Email } from './e-mail';
 
 describe('Email', () => {

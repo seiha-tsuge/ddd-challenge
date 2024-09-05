@@ -2,12 +2,10 @@ import { ValueObject } from '@/domain/models/shared/value-object';
 
 type EnrollmentStatusValue = 'Active' | 'OnLeave' | 'Withdrawn';
 
-export class EnrollmentStatus extends ValueObject<
-  EnrollmentStatusValue,
-  'EnrollmentStatus'
-> {
+export class EnrollmentStatus extends ValueObject<EnrollmentStatusValue, 'EnrollmentStatus'> {
   constructor(value: EnrollmentStatusValue) {
     super(value);
+    this.validate(value);
   }
 
   protected validate(value: EnrollmentStatusValue): void {

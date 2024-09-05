@@ -1,8 +1,9 @@
-import { PairId } from './pair-id/pair-id';
-import { PairCode } from './pair-code/pair-code';
-import { PairName } from './pair-name/pair-name';
-import { Pair } from './pair';
 import { nanoid } from 'nanoid';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { Pair } from './pair';
+import { PairCode } from './pair-code/pair-code';
+import { PairId } from './pair-id/pair-id';
+import { PairName } from './pair-name/pair-name';
 
 describe('Pairクラスのテスト', () => {
   let pairId: PairId;

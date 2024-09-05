@@ -1,8 +1,8 @@
-import { TeamId } from './team-id/team-id';
-import { TeamCode } from './team-code/team-code';
-import { TeamName } from './team-name/team-name';
-import { Pair } from './pair/pair';
-import { Member } from './member/member';
+import type { Member } from './member/member';
+import type { Pair } from './pair/pair';
+import type { TeamCode } from './team-code/team-code';
+import type { TeamId } from './team-id/team-id';
+import type { TeamName } from './team-name/team-name';
 
 export class Team {
   constructor(
@@ -13,13 +13,7 @@ export class Team {
     private readonly _member: Member,
   ) {}
 
-  static create(
-    teamId: TeamId,
-    teamCode: TeamCode,
-    teamName: TeamName,
-    pair: Pair,
-    member: Member,
-  ) {
+  static create(teamId: TeamId, teamCode: TeamCode, teamName: TeamName, pair: Pair, member: Member) {
     return new Team(teamId, teamCode, teamName, pair, member);
   }
 

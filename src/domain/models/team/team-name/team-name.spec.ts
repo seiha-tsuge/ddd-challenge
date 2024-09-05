@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { TeamName } from './team-name';
 
 describe('TeamName', () => {
@@ -12,19 +13,20 @@ describe('TeamName', () => {
     { value: 1000, description: '1000以上の整数' },
     { value: 3.14, description: '小数値' },
     { value: '123', description: '文字列としての数字' },
-    { value: NaN, description: 'NaN' },
-    { value: Infinity, description: '無限大' },
+    { value: Number.NaN, description: 'NaN' },
+    { value: Number.POSITIVE_INFINITY, description: '無限大' },
     { value: null, description: 'null' },
     { value: undefined, description: 'undefined' },
   ];
 
-  invalidTeamNames.forEach(({ value, description }) => {
+  for (const { value, description } of invalidTeamNames) {
     it(`無効なTeamNameでエラーがスローされる (${description})`, () => {
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
       expect(() => new TeamName(value as any)).toThrow(
         '無効なTeamNameです。TeamNameは0から999までの数字でなければなりません。',
       );
     });
-  });
+  }
 
   it('等価性のテスト（同じTeamName）', () => {
     const teamNameValue = 456;

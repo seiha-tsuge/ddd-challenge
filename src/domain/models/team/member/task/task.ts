@@ -1,9 +1,9 @@
-import { TaskId } from './task-id/task-id';
-import { Title } from './title/title';
-import { Content } from './content/content';
-import { ProgressStatus } from './progress-status/progress-status';
-import { Order } from './order/order';
-import { Category } from './category/category';
+import type { Category } from './category/category';
+import type { Content } from './content/content';
+import type { Order } from './order/order';
+import type { ProgressStatus } from './progress-status/progress-status';
+import type { TaskId } from './task-id/task-id';
+import type { Title } from './title/title';
 
 export class Task {
   constructor(

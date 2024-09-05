@@ -1,6 +1,6 @@
-import { PairId } from './pair-id/pair-id';
-import { PairCode } from './pair-code/pair-code';
-import { PairName } from './pair-name/pair-name';
+import type { PairCode } from './pair-code/pair-code';
+import type { PairId } from './pair-id/pair-id';
+import type { PairName } from './pair-name/pair-name';
 
 export class Pair {
   constructor(

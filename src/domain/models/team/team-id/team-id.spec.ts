@@ -1,5 +1,6 @@
-import { TeamId } from './team-id';
 import { nanoid } from 'nanoid';
+import { describe, expect, it } from 'vitest';
+import { TeamId } from './team-id';
 
 describe('TeamId', () => {
   it('有効なTeamIdでTeamIdを作成できる', () => {

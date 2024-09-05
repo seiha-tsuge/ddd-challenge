@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { EnrollmentStatus } from './enrollment-status';
 
 describe('EnrollmentStatus', () => {
@@ -17,9 +18,8 @@ describe('EnrollmentStatus', () => {
   });
 
   it('無効なステータスでエラーがスローされる', () => {
-    expect(() => new EnrollmentStatus('InvalidStatus' as any)).toThrow(
-      '無効なEnrollmentStatusです',
-    );
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    expect(() => new EnrollmentStatus('InvalidStatus' as any)).toThrow('無効なEnrollmentStatusです');
   });
 
   it('等価性のテスト（同じステータス）', () => {

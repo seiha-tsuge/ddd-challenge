@@ -1,5 +1,6 @@
-import { PairId } from './pair-id';
 import { nanoid } from 'nanoid';
+import { describe, expect, it } from 'vitest';
+import { PairId } from './pair-id';
 
 describe('PairId', () => {
   it('有効なPairIdでPairIdを作成できる', () => {

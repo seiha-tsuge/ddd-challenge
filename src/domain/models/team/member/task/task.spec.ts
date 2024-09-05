@@ -1,11 +1,12 @@
+import { nanoid } from 'nanoid';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { Category } from './category/category';
+import { Content } from './content/content';
+import { Order } from './order/order';
+import { ProgressStatus } from './progress-status/progress-status';
 import { Task } from './task';
 import { TaskId } from './task-id/task-id';
 import { Title } from './title/title';
-import { Content } from './content/content';
-import { ProgressStatus } from './progress-status/progress-status';
-import { Order } from './order/order';
-import { Category } from './category/category';
-import { nanoid } from 'nanoid';
 
 describe('Taskクラスのテスト', () => {
   let taskId: TaskId;

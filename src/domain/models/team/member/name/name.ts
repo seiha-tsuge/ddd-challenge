@@ -5,6 +5,7 @@ type NameValue = string;
 export class Name extends ValueObject<NameValue, 'Name'> {
   constructor(value: NameValue) {
     super(value);
+    this.validate(value);
   }
 
   protected validate(value: NameValue): void {

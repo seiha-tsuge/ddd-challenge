@@ -1,10 +1,11 @@
-import { Member } from './member';
-import { MemberId } from './member-id/member-id';
-import { Name } from './name/name';
+import { nanoid } from 'nanoid';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { Email } from './e-mail/e-mail';
 import { EnrollmentStatus } from './enrollment-status/enrollment-status';
 import { JoinDate } from './join-date/join-date';
-import { nanoid } from 'nanoid';
+import { Member } from './member';
+import { MemberId } from './member-id/member-id';
+import { Name } from './name/name';
 
 describe('Memberクラスのテスト', () => {
   let memberId: MemberId;

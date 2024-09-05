@@ -1,7 +1,7 @@
 import { isEqual } from 'lodash';
 
 export abstract class ValueObject<T, U> {
-  private _type: U;
+  private _type!: U;
   protected readonly _value: T;
 
   constructor(value: T) {

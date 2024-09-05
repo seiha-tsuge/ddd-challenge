@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { JoinDate } from './join-date';
 
 describe('JoinDate', () => {
@@ -8,15 +9,12 @@ describe('JoinDate', () => {
   });
 
   it('無効な日付でエラーがスローされる（文字列）', () => {
-    expect(() => new JoinDate('invalid-date' as any)).toThrow(
-      '無効なJoinDateです',
-    );
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    expect(() => new JoinDate('invalid-date' as any)).toThrow('無効なJoinDateです');
   });
 
   it('無効な日付でエラーがスローされる（NaN）', () => {
-    expect(() => new JoinDate(new Date('invalid-date'))).toThrow(
-      '無効なJoinDateです',
-    );
+    expect(() => new JoinDate(new Date('invalid-date'))).toThrow('無効なJoinDateです');
   });
 
   it('等価性のテスト（同じ日付）', () => {

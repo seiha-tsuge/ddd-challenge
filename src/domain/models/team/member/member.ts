@@ -1,8 +1,8 @@
-import { MemberId } from './member-id/member-id';
-import { Name } from './name/name';
-import { Email } from './e-mail/e-mail';
-import { EnrollmentStatus } from './enrollment-status/enrollment-status';
-import { JoinDate } from './join-date/join-date';
+import type { Email } from './e-mail/e-mail';
+import type { EnrollmentStatus } from './enrollment-status/enrollment-status';
+import type { JoinDate } from './join-date/join-date';
+import type { MemberId } from './member-id/member-id';
+import type { Name } from './name/name';
 
 export class Member {
   constructor(
@@ -13,13 +13,7 @@ export class Member {
     private readonly _joinDate: JoinDate,
   ) {}
 
-  static create(
-    memberId: MemberId,
-    name: Name,
-    email: Email,
-    enrollmentStatus: EnrollmentStatus,
-    joinDate: JoinDate,
-  ) {
+  static create(memberId: MemberId, name: Name, email: Email, enrollmentStatus: EnrollmentStatus, joinDate: JoinDate) {
     return new Member(memberId, name, email, enrollmentStatus, joinDate);
   }
 

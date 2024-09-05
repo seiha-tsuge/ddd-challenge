@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { ProgressStatus } from './progress-status';
 
 describe('ProgressStatus', () => {
@@ -17,9 +18,8 @@ describe('ProgressStatus', () => {
   });
 
   it('無効なステータスでエラーがスローされる', () => {
-    expect(() => new ProgressStatus('InvalidStatus' as any)).toThrow(
-      '無効なProgressStatusです',
-    );
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    expect(() => new ProgressStatus('InvalidStatus' as any)).toThrow('無効なProgressStatusです');
   });
 
   it('CompletedからNotStartedへの変更でエラーがスローされる', () => {

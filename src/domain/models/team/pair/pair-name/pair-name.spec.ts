@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { PairName } from './pair-name';
 
 describe('PairName', () => {
@@ -15,13 +16,13 @@ describe('PairName', () => {
     { value: '@', description: '記号' },
   ];
 
-  invalidPairNames.forEach(({ value, description }) => {
+  for (const { value, description } of invalidPairNames) {
     it(`無効なPairNameでエラーがスローされる (${description})`, () => {
       expect(() => new PairName(value)).toThrow(
         '無効なPairNameです。PairNameは英文字（a, b, c, d, eなど）で1文字でなければなりません。',
       );
     });
-  });
+  }
 
   it('等価性のテスト（同じPairName）', () => {
     const pairNameValue = 'B';

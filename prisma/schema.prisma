@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  task_id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title           String
+  content         String
+  progress_status String
+  order           Int
+  category_id     String   @db.Uuid
+  category        Category @relation(fields: [category_id], references: [category_id])
+  member_id       String   @db.Uuid
+  member          Member   @relation(fields: [member_id], references: [member_id])
+}
+
+model Category {
+  category_id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String @unique
+  task        Task[]
+}
+
+model Member {
+  member_id         String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name              String
+  email             String       @unique
+  enrollment_status String
+  join_date         DateTime     @default(now())
+  pairs             PairMember[]
+  team_id           String       @db.Uuid
+  Task              Task[]
+}
+
+model Pair {
+  pair_id   String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  pair_code String
+  pair_name String
+  members   PairMember[]
+  team_id   String       @db.Uuid
+  team      Team         @relation(fields: [team_id], references: [team_id], onDelete: Cascade)
+}
+
+model PairMember {
+  pair_id   String @db.Uuid
+  member_id String @db.Uuid
+  Pair      Pair   @relation(fields: [pair_id], references: [pair_id], onDelete: Cascade)
+  Member    Member @relation(fields: [member_id], references: [member_id], onDelete: Cascade)
+
+  @@id([pair_id, member_id])
+}
+
+model Team {
+  team_id   String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  team_code String
+  team_name String
+  pairs     Pair[]
+}

@@ -30,3 +30,6 @@ docker run -d -p 8888:8080 plantuml/plantuml-server:jetty
 
 1. VSCode で .plantuml ファイルを開きます。
 1. Option + D (Mac) または Alt + D (Windows/Linux) を押して、プレビューウィンドウを開きます。
+
+
+npx prisma migrate dev --name init

@@ -1,5 +1,5 @@
 import type { Member } from '../member/member';
-import type { Pair } from './pair/pair';
+import type { Pair } from '../pair/pair';
 import type { TeamCode } from './team-code/team-code';
 import type { TeamId } from './team-id/team-id';
 import type { TeamName } from './team-name/team-name';

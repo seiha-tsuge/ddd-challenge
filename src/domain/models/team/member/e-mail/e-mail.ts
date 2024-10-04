@@ -1,6 +1,6 @@
 import { ValueObject } from '@/domain/models/shared/value-object';
 
-type EmailValue = string;
+export type EmailValue = string;
 
 export class Email extends ValueObject<EmailValue, 'Email'> {
   constructor(value: EmailValue) {

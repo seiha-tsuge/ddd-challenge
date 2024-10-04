@@ -17,6 +17,16 @@ export class Member {
     return new Member(memberId, name, email, enrollmentStatus, joinDate);
   }
 
+  static reconstruct(
+    memberId: MemberId,
+    name: Name,
+    email: Email,
+    enrollmentStatus: EnrollmentStatus,
+    joinDate: JoinDate,
+  ) {
+    return new Member(memberId, name, email, enrollmentStatus, joinDate);
+  }
+
   get memberId(): MemberId {
     return this._memberId;
   }

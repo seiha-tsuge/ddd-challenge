@@ -1,6 +1,6 @@
 import { ValueObject } from '@/domain/models/shared/value-object';
 
-type MemberIdValue = string;
+export type MemberIdValue = string;
 
 export class MemberId extends ValueObject<MemberIdValue, 'MemberId'> {
   constructor(value: MemberIdValue) {

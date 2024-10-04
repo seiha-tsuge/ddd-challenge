@@ -1,6 +1,6 @@
 import { ValueObject } from '@/domain/models/shared/value-object';
 
-type JoinDateValue = Date;
+export type JoinDateValue = Date;
 
 export class JoinDate extends ValueObject<JoinDateValue, 'JoinDate'> {
   constructor(value: JoinDateValue) {

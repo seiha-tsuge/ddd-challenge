@@ -1,6 +1,6 @@
 import { ValueObject } from '@/domain/models/shared/value-object';
 
-type EnrollmentStatusValue = 'Active' | 'OnLeave' | 'Withdrawn';
+export type EnrollmentStatusValue = 'Active' | 'OnLeave' | 'Withdrawn';
 
 export class EnrollmentStatus extends ValueObject<EnrollmentStatusValue, 'EnrollmentStatus'> {
   constructor(value: EnrollmentStatusValue) {

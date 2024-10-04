@@ -1,6 +1,6 @@
-import { Email, EnrollmentStatus, JoinDate, Member, MemberId, Name } from '@/domain/models/team/member';
-import type { EnrollmentStatusValue } from '@/domain/models/team/member';
-import type { IMemberRepository } from '@/domain/models/team/member/member-repository';
+import { Email, EnrollmentStatus, JoinDate, Member, MemberId, Name } from '@/domain/models/member';
+import type { EnrollmentStatusValue } from '@/domain/models/member';
+import type { IMemberRepository } from '@/domain/models/member/member-repository';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();

@@ -1,11 +1,11 @@
 import { nanoid } from 'nanoid';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { Email } from './member/e-mail/e-mail';
-import { EnrollmentStatus } from './member/enrollment-status/enrollment-status';
-import { JoinDate } from './member/join-date/join-date';
-import { Member } from './member/member';
-import { MemberId } from './member/member-id/member-id';
-import { Name } from './member/name/name';
+import { Email } from '../member/e-mail/e-mail';
+import { EnrollmentStatus } from '../member/enrollment-status/enrollment-status';
+import { JoinDate } from '../member/join-date/join-date';
+import { Member } from '../member/member';
+import { MemberId } from '../member/member-id/member-id';
+import { Name } from '../member/name/name';
 import { Pair } from './pair/pair';
 import { PairCode } from './pair/pair-code/pair-code';
 import { PairId } from './pair/pair-id/pair-id';

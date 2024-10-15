@@ -7,23 +7,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Task {
+model task {
   task_id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   title           String
   content         String
   progress_status String
   order           Int
   category_id     String   @db.Uuid
-  category        Category @relation(fields: [category_id], references: [category_id])
+  category        category @relation(fields: [category_id], references: [category_id])
 }
 
-model Category {
+model category {
   category_id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name        String @unique
-  task        Task[]
+  task        task[]
 }
 
-model Member {
+model member {
   member_id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name              String
   email             String   @unique
@@ -31,14 +31,14 @@ model Member {
   join_date         DateTime @default(now())
 }
 
-model Pair {
+model pair {
   pair_id   String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   pair_code String
   pair_name String
   team_id   String @db.Uuid
 }
 
-model Team {
+model team {
   team_id   String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   team_code String
   team_name String

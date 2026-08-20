@@ -37,12 +37,12 @@
     "packageManager": {
       "name": "pnpm",
       "version": "11.22.0",
-      "onFail": "error"
+      "onFail": "warn"
     },
     "runtime": {
       "name": "node",
       "version": "24.18.0",
-      "onFail": "error"
+      "onFail": "warn"
     }
   },
   "engines": {

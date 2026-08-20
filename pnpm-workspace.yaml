@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: true
+  lefthook: true
+packageConfigs:
+  ddd-challenge:
+    saveExact: true

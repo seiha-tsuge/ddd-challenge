@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/seiha-tsuge/ddd-challenge.git"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
@@ -18,11 +19,13 @@
     "lint:fix": "oxlint --fix",
     "reset": "pnpm ci",
     "start": "node dist/index.js",
+    "test": "node --import tsx --test test/domain/shared/value-objects.test.ts",
     "typecheck": "oxlint --type-aware --type-check"
   },
   "dependencies": {
     "@hono/node-server": "2.1.1",
-    "hono": "4.13.3"
+    "hono": "4.13.3",
+    "uuid": "14.0.2"
   },
   "devDependencies": {
     "@types/node": "26.1.1",

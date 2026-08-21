@@ -213,6 +213,9 @@ importers:
       hono:
         specifier: 4.13.3
         version: 4.13.3
+      uuid:
+        specifier: 14.0.2
+        version: 14.0.2
     devDependencies:
       '@types/node':
         specifier: 26.1.1
@@ -912,6 +915,10 @@ packages:
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
+  uuid@14.0.2:
+    resolution: {integrity: sha512-xZe/16rV4aa+HGSOCiY2YeLT1OybRLrrkL/Rqaq7p7GMVXjFh+6wN4oMYgjFmnSnhY8t6Xpdl2l9qmnHYuMHwQ==}
+    hasBin: true
+
 snapshots:
 
   '@esbuild/aix-ppc64@0.28.2':
@@ -1357,3 +1364,5 @@ snapshots:
       '@typescript/typescript-win32-x64': 7.0.2
 
   undici-types@8.3.0: {}
+
+  uuid@14.0.2: {}
